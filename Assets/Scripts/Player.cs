@@ -31,14 +31,14 @@ public class Player : MonoBehaviour
 
     public void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.tag == "Border (Bottom)")
+        if (other.gameObject.tag == "Border (Bottom)" || other.gameObject.tag == "Border (Top)")
         {
-            SceneManager.LoadScene("Lose");
+            GameManager.thisManager.GameOver();
         }
 
         if (other.gameObject.tag == "Obstacles")
         {
-            SceneManager.LoadScene("Lose");
+            GameManager.thisManager.GameOver();
         }
     }
 }
