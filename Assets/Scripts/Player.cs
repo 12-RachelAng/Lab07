@@ -35,5 +35,10 @@ public class Player : MonoBehaviour
         {
             SceneManager.LoadScene("Lose");
         }
+
+        if (other.gameObject.tag == "Obstacles")
+        {
+            SceneManager.LoadScene("Lose");
+        }
     }
 }

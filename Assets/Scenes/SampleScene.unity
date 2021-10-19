@@ -525,6 +525,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObstacleManager
       objectReference: {fileID: 0}
+    - target: {fileID: 1367494817254691767, guid: cb5c1cfd365a4634885214c81e06a60f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacles
+      objectReference: {fileID: 0}
     - target: {fileID: 5140303659050033032, guid: cb5c1cfd365a4634885214c81e06a60f,
         type: 3}
       propertyPath: m_LocalPosition.x
