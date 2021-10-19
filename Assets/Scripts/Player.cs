@@ -33,12 +33,20 @@ public class Player : MonoBehaviour
     {
         if (other.gameObject.tag == "Border (Bottom)" || other.gameObject.tag == "Border (Top)")
         {
-            GameManager.thisManager.GameOver();
+            //GameManager.thisManager.GameOver();
+            SceneManager.LoadScene("Lose");
         }
 
         if (other.gameObject.tag == "Obstacles")
         {
-            GameManager.thisManager.GameOver();
+            //GameManager.thisManager.GameOver();
+            SceneManager.LoadScene("Lose");
         }
+    }
+
+    //Retry Button
+    public void RetryButton()
+    {
+        SceneManager.LoadScene("SampleScene");
     }
 }
