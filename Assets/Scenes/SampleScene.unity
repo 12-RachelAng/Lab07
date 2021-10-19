@@ -670,6 +670,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1221792059, guid: fa616eb311850a54498fbc4920bda0fa, type: 3}
+      propertyPath: ScoreCounter
+      value: 
+      objectReference: {fileID: 1995243556}
     - target: {fileID: 1111274631518572476, guid: fa616eb311850a54498fbc4920bda0fa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -830,3 +834,9 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1995243556 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7942643918165592037, guid: 6c6e5f222f546d84ea2769878189e2dd,
+    type: 3}
+  m_PrefabInstance: {fileID: 852696454}
+  m_PrefabAsset: {fileID: 0}

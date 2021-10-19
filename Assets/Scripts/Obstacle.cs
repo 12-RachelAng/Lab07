@@ -9,8 +9,12 @@ public class Obstacle : MonoBehaviour
 
     void Update()
     {
-        if (transform.position.x <= -8)
+        if (transform.position.x <= -1)
+        {
+            Player.Score++;
             Destroy(gameObject);
+        }
+            
         else
             transform.Translate(Vector3.right * Time.deltaTime * -Speed);
     }

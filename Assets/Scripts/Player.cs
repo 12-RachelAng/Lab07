@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class Player : MonoBehaviour
     public Vector3 Jump;
     public float jumpForce = 2.0f;
     Rigidbody rb;
+
+    public GameObject ScoreCounter;
+    public static int Score;
 
     void Start()
     {
@@ -26,6 +30,8 @@ public class Player : MonoBehaviour
             rb.AddForce(Jump * jumpForce, ForceMode.Impulse);
             thisAnimation.Play();
         }
+
+        ScoreCounter.GetComponent<Text>().text = "Score: " + Score;
             
     }
 
@@ -47,6 +53,7 @@ public class Player : MonoBehaviour
     //Retry Button
     public void RetryButton()
     {
+        Score = 0;
         SceneManager.LoadScene("SampleScene");
     }
 }
