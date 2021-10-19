@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -26,5 +27,13 @@ public class Player : MonoBehaviour
             thisAnimation.Play();
         }
             
+    }
+
+    public void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag == "Border (Bottom)")
+        {
+            SceneManager.LoadScene("Lose");
+        }
     }
 }
