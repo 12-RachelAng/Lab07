@@ -48,6 +48,15 @@ public class Player : MonoBehaviour
             //GameManager.thisManager.GameOver();
             SceneManager.LoadScene("Lose");
         }
+
+        if (other.gameObject.tag == "Border (Bottom)" || other.gameObject.tag == "Border (Top)" && Score > 1)
+        {
+            SceneManager.LoadScene("GameOver");
+        }
+        else if (other.gameObject.tag == "Obstacles" && Score > 1)
+        {
+            SceneManager.LoadScene("GameOver");
+        }
     }
 
     //Retry Button
